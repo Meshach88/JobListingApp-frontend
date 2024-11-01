@@ -12,7 +12,8 @@ const router = useRouter();
 const toast = useToast();
 
 const jobId = route.params.id;
-const url = 'http://localhost:4000'
+// const url = 'http://localhost:4000'
+const url = 'https://joblistingapp-backend.onrender.com'
 
 const state = reactive({
     job: [],
@@ -24,7 +25,7 @@ const deleteJob = async () => {
         const confirm = window.confirm('Are you sure you want to delete this job?')
         if (confirm) {
             // await axios.delete(`/api/jobs/${jobId}`)
-            await axios.delete(url+'/api/jobs/delete',{id:jobId})
+            await axios.delete(url+`/api/jobs/delete/${jobId}`)
             toast.success("Job Deleted Succesfully")
             router.push('/jobs')
         }

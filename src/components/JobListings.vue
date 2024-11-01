@@ -12,7 +12,8 @@ defineProps({
         default:false
     }
 })
-const url = 'http://localhost:4000'
+// const url = 'http://localhost:4000'
+const url = 'https://joblistingapp-backend.onrender.com'
 // const jobs = ref([])
 const state = reactive({
     jobs:[],

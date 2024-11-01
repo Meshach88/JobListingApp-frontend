@@ -8,7 +8,8 @@ import { useRoute } from 'vue-router';
 
 const route = useRoute()
 const jobId = route.params.id
-const url = 'http://localhost:4000'
+// const url = 'http://localhost:4000'
+const url = 'https://joblistingapp-backend.onrender.com'
 const form = reactive({
     type: 'Full-Time',
     title: '',
